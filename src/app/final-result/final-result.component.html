@@ -1,0 +1,92 @@
+<app-header></app-header>
+
+
+<div class="card-block">
+  <br>
+  <div>
+    <h1>Student Result Details</h1>
+  </div>
+
+
+  <div id="tableWithDynamicRows_wrapper" class="dataTables_wrapper no-footer">
+    <div>
+      <div>
+        <table class="table table-hover demo-table-dynamic table-responsive-block dataTable no-footer" id="tableWithDynamicRows"
+          role="grid" aria-describedby="tableWithDynamicRows_info">
+          <thead>
+            <tr role="row">
+              <th class="sorting" tabindex="0" aria-controls="tableWithDynamicRows" rowspan="1" colspan="1" aria-label="App name: activate to sort column ascending"> Student Number</th>
+              <th class="sorting_desc" tabindex="0" aria-controls="tableWithDynamicRows" rowspan="1" colspan="1" aria-label="Description: activate to sort column ascending"
+                style="width: 294px;" aria-sort="descending">Name</th>
+              <th class="sorting" tabindex="0" aria-controls="tableWithDynamicRows" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending"
+                style="width: 182px;">Subject</th>
+              <th class="sorting" tabindex="0" aria-controls="tableWithDynamicRows" rowspan="1" colspan="1" aria-label="Notes: activate to sort column ascending"
+                style="width: 238px;">Score </th>
+              <th class="sorting" tabindex="0" aria-controls="tableWithDynamicRows" rowspan="1" colspan="1" aria-label="Notes: activate to sort column ascending"
+                style="width: 238px;">Outof</th>
+               
+                
+               
+            </tr>
+          </thead>
+          <tbody *ngFor="let one of rd;let i=index;">
+
+            <tr role="row" class="odd">
+              <td class="v-align-middle">
+                <p>{{i+1}}</p>
+              </td>
+              <td class="v-align-middle">
+                <p>{{one.userDetails.username}}</p>
+              </td>
+              <td class="v-align-middle sorting_1">
+                <p>{{one.subject}}</p>
+              </td>
+              <td class="v-align-middle">
+                <p>{{one.summary.correct}}</p>
+              </td>
+              <td class="v-align-middle">
+                <p>{{one.summary.correct + one.summary.wrong}}</p>
+              </td>
+              
+              <td>
+                <div class="btn-group">
+                  
+                  
+                  <button type="button"   (click)="removeResult(one,i)" class="btn btn-success">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </div>
+
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <div class="dataTables_paginate paging_simple_numbers" id="tableWithDynamicRows_paginate">
+          <ul class="">
+            <li class="paginate_button previous disabled" id="tableWithDynamicRows_previous">
+              <a href="#" aria-controls="tableWithDynamicRows" data-dt-idx="0" tabindex="0">
+                <i class="pg-arrow_left"></i>
+              </a>
+            </li>
+            <li class="paginate_button active">
+              <a href="#" aria-controls="tableWithDynamicRows" data-dt-idx="1" tabindex="0">1</a>
+            </li>
+            <li class="paginate_button next disabled" id="tableWithDynamicRows_next">
+              <a href="#" aria-controls="tableWithDynamicRows" data-dt-idx="2" tabindex="0">
+                <i class="pg-arrow_right">
+                </i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button (click)="myFunction()" class="btn btn-xs btn-default" >Print this page</button>
+        
+      </div>
+    </div>
+  </div>
+</div>

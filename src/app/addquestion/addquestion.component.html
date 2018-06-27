@@ -1,0 +1,94 @@
+<app-header></app-header>
+
+<section class="page-heading-section heading-style-two bg-image before-bg" style="background-image: url(/assets/images/editorbg.jpg);">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="page-heading">
+          <h2 class="page-name text-capitalize">Welcome To Test Editor.</h2>
+          <p>Edit Your Test Here.. </p>
+        </div>
+        <!--/.page-heading-->
+      </div>
+      <!--/.col-md-12-->
+    </div>
+    <!--/.row-->
+  </div>
+  <!--/.container-->
+</section>
+
+
+
+
+<!-- <section>
+  <h4 class="alert alert-info text-center">Add More Questions</h4>
+  
+<div class="login-form-area">
+  <div class="addquestion">
+      <input class="form-control" type="text" [(ngModel)]="question.id" placeholder="Question Id">
+    <input class="form-control" type="text" [(ngModel)]="question.name" placeholder="Question*">
+    <input class="form-control" type="text" [(ngModel)]="question.subject" placeholder="Subject">
+    <input class="form-control" type="text" [(ngModel)]="question.questionTypeId" placeholder="Question Type Id">
+    <input class="form-control" type="text" [(ngModel)]="question.option3" placeholder="Option C">
+    <input class="form-control" type="email" [(ngModel)]="question.option4" placeholder="Option D">
+    <input class="form-control" type="phone" [(ngModel)]="question.answer" placeholder="Answer">
+    <button class="btn btn-info" (click)="addquestion()" type="button">Add Question</button>
+  </div>
+</div>
+
+</section> -->
+
+
+
+
+
+
+<div class="col-lg-4">
+  <div class="event-sidebar">
+    <div class="bay-ticket-area">
+      <div class="header">
+        <h2>
+          <span class="fa fa-ticket"></span>
+          ADD QUESTION HERE</h2>
+      </div>
+      <div class="ticket-form">
+        <div class="form-group">
+          <input type="email" class="form-control" id="email" [(ngModel)]="question.subject" placeholder="Enter Subject Here">
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" id="name" [(ngModel)]="question.name" placeholder="Enter Question Here" required="">
+        </div>
+        <div *ngFor="let one of question.options" class="row">
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" [(ngModel)]="one.name" placeholder="Option Text">
+          </div>
+        </div>
+          <h4>Select Correct Answer</h4>
+        <select [(ngModel)]="answer">
+          <option *ngFor="let one of question.options; let ind = index;" [value]="ind">{{ind+1}}</option>
+        </select>
+
+        <button type="submit" (click)="addQuestion()" class="btn btn-default btn-primary">Add Question</button>
+      </div>
+      <!--/.ticket-form-->
+    </div>
+    <!--/.bay-ticket-area-->
+  </div>
+  <!--/.event-sidebar-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-footer></app-footer>

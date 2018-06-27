@@ -1,0 +1,151 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+/*=============================
+## Login And Register Page
+===============================*/
+.login-form-area h2 {
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.social-login-area {
+    padding: 30px 0 40px;
+    text-align: center;
+}
+.social-login-area > a {
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 26px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 6px 5px;
+    width: 60px;
+}
+.social-login-area > a.facebook {
+    background-color: #295396;
+}
+.social-login-area > a.twitter {
+    background-color: #00C1F7;
+}
+.social-login-area > a.google {
+    background-color: #F4511E;
+}
+.social-login-area > a.linkedin {
+    background-color: #0077B7;
+}
+.social-login-area > a:hover {
+    color: #fff !important;
+}
+.divider-or {
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    margin-bottom: 40px;
+}
+.divider-or > span {
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 12px;
+    height: 30px;
+    left: 50%;
+    line-height: 30px;
+    margin-left: -15px;
+    position: absolute;
+    text-transform: uppercase;
+    top: -15px;
+    width: 30px;
+}
+.login-form-area .form-control {
+    border: 1px solid #ddd;
+    color: #6a6c6d;
+    font-size: 14px;
+    height: 50px;
+}
+.login-form-area .form-control:focus {
+    border: 1px solid #000;
+}
+.login-form-area a:hover {
+    color: #ff7f45;
+}
+.login-form-forgot-password {
+    display: block;
+    text-align: center;
+}
+.login-form-area form > p {
+    margin-bottom: 25px;
+}
+.login-form-area .btn-primary {
+    border-radius: 0;
+    margin-top: 20px;
+    width: 100%;
+    cursor: pointer;
+}
+.login-form-remember input {
+    margin-right: 7px;
+}
+.login-form-register-now {
+    border-top: 1px solid #ddd;
+    margin-top: 25px;
+    padding-top: 30px;
+    text-align: center;
+}
+.login-form-register-now a {
+    color: #ff7f45;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+.register-form-area .btn-primary {
+    margin-top: 0px;
+}
+.register-form-area .login-form-register-now {
+    margin-top: 35px;
+}

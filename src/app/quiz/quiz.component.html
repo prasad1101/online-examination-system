@@ -1,0 +1,211 @@
+<app-header></app-header>
+
+<section *ngIf="!isQuizSubmitted()" id="faqs-section" class="faqs-section-area bg-gray s-pd1">
+  <div class="container">
+   <div class="row">
+  </div>
+  <div class="row justify-content-md-center">
+    
+    <div class="col-lg-8">
+      <div class="section-heading-area text-center">
+        <h2 class="section-heading text-capitalize" [innerHTML]="(qId + 1) + '. ' + curQue.name"></h2>
+        <h6>
+            {{counter}}
+        </h6>
+      </div>
+      <!--/.section-heading-area-->
+    </div>
+    
+      <!--/.col-lg-8-->
+    </div>
+    <!--/.row-->
+
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <!--Single FAQ-->
+        <div *ngFor="let opt of curQue.options; let ind = index;" [ngClass]="{'selected' : isAns(curQue._id, ind)}" (click)="selectAns(curQue._id, ind, opt.isAnswer)"
+          class="sengle-faq">
+          <span class="faq-number" [innerHTML]="ind + 1"></span>
+          <div class="sengle-faq-content">
+            <h3 [ngClass]="{'selected' : isAns(curQue._id, ind)}" [innerHTML]="opt.name"></h3>
+          </div>
+        </div>
+        <!--/.sengle-faq-end-->
+
+      </div>
+      <!--/.col-lg-12-->
+    </div>
+    <!--/.row-->
+  </div>
+  <!--/.container-->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <!-- <h2>Become A Part of EduLab Community Today</h2> -->
+      </div>
+      <!--/.col-lg-9-->
+      <div class="col-lg-5 text-right">
+        <span *ngIf="(qId > 0)" (click)="loadQuestion(qId -1)" class="btn btn-xs btn-default">Previous</span>
+        <span *ngIf="isAns(curQue._id, -1)" (click)="loadQuestion(qId+1)" class="btn btn-xs btn-default">{{nextText}}</span>
+        <span *ngIf="isAns(curQue._id, -1)" (click)="clearQuestion(curQue._id)" class="btn btn-xs btn-default">Clear</span>
+      </div>
+      <!--/.col-lg-3-->
+    </div>
+    <!--/.row-->
+  </div>
+</section>
+
+
+
+
+
+<section *ngIf="isQuizSubmitted()">
+  <div class="col-lg-4 col-md-12">
+    <div class="blog-sidebar">
+    
+      <aside class="widget widget-recent-post">
+        <h2>Your final score card</h2>
+        <p>{{result.correct}} are correct and {{result.wrong}} are wrong</p>
+        <div *ngFor="let one of quiz.questions" class="sidebar__single-post">
+          <div class="single-post__details">
+            <h5>{{one.name}}
+              
+            </h5>
+            <div class="single-post__more">
+              <span *ngIf="ansCache[one._id]" class="date">
+                <span class="blog__date"> You answered {{one.options[ansCache[one._id].ansIndex].name}}
+                  <span [ngClass]="{'correct' : isCorrectAns(one._id), 'wrong' : !isCorrectAns(one._id) }">
+                    {{(isCorrectAns(one._id) ? " is Correct" : " is Wrong")}}
+                  </span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+       
+      </aside>
+      <!--/.widget-recent-post-->
+    </div>
+    <!--/.blog-sidebar-->
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+  <div class="col-6">
+    <h3>Welcome To Online Examination Center.....</h3>
+  </div>
+  
+</div>
+<div id="quiz">
+  <h2 class="text-center font-weight-normal">{{quiz.name}}</h2>
+  <hr />
+ 
+  <div *ngIf="mode=='quiz' && quiz">
+    <div *ngFor="let question of filteredQuestions;">
+      <div class="badge badge-info">Question {{pager.index + 1}} of {{pager.count}}.</div>
+      <h3 class="font-weight-normal">{{pager.index + 1}}. <span [innerHTML]="question.name"></span></h3>
+      <div class="row text-left options">
+        <div class="col-6" *ngFor="let option of question.options">
+          <div class="option">
+            <label class="font-weight-normal" [attr.for]="option.id">
+                <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" />
+                {{option.name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="text-center">
+      <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(0);">First</button>
+      <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(pager.index - 1);">Prev</button>
+      <button class="btn btn-primary" (click)="goTo(pager.index + 1)">Next</button>
+      <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(pager.count - 1);">Last</button>
+      <pagination *ngIf="config.showPager" direction-links="false" total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></pagination>
+    </div>
+  </div>
+
+  <div class="row text-center" *ngIf="mode=='review'">
+    <div class="col-4 cursor-pointer" *ngFor="let question of quiz.questions; let index = index;">
+      <div (click)="goTo(index)" class="p-3 mb-2 {{ isAnswered(question) == 'Answered'? 'bg-info': 'bg-warning' }}">{{index + 1}}. {{ isAnswered(question) }}</div>
+    </div>
+  </div>
+  <div class="result" *ngIf="mode=='result'">
+    <h2>Quiz Result</h2>
+    <div *ngFor="let question of quiz.questions; let index = index">
+      <div class="result-question">
+        <h4>{{index + 1}}. {{question.name}}</h4>
+        <div class="row">
+          <div class="col-6" *ngFor="let Option of question.options">
+            <input id="{{Option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="Option.selected" /> {{Option.name}}
+          </div>
+        </div>
+        <div class="alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{isCorrect(question)}}.</div>
+      </div>
+    </div>
+    <h4 class="alert alert-info text-center">You may close this window now.</h4>
+  </div>
+  <hr />
+  <div *ngIf="mode!='result'">
+    <button class="btn btn-default" (click)="mode = 'quiz'">Quiz</button>
+    <button class="btn btn-info" (click)="mode = 'review'">Review</button>
+    <button class="btn btn-primary" (click)="onSubmit();">Submit Quiz</button>
+  </div>
+</div>
+
+<div  class="given">
+
+  <p><span class="title">You answered incorrectly: </span></p>
+  <p>{{ score }}</p>
+
+</div>
+<h3>Wrong  {{wrongCnt}}</h3> -->
+
+
+<app-footer></app-footer>>

@@ -1,0 +1,557 @@
+ <!--====Header Area
+    ====================================-->
+    <header id="site-header" class="header-area">
+        <div class="header-inner">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="logo-menu-wrap hidden-xs hidden-sm">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="/assets/images/img/logo.png" alt="logo">
+                                </a>
+                            </div><!--/.logo-->
+                            <nav class="menu">
+                                <ul id="nav">
+                                    <li class="dropdown-trigger"><a href="#">home</a>
+                                       
+                                    </li>
+                                    <li class="dropdown-trigger"><a href="#">About</a>
+                                        <ul class="dropdown-content">
+                                            <li><a [routerLink]="'/about/about-us'">About OES</a></li>
+                                            <li><a [routerLink]="'/about/about-pvg'">About Us</a></li>
+                                        </ul>
+                                    </li>
+                                  
+                                    
+                                   
+                                </ul>
+                            </nav><!--/.menu-->
+                            <div class="register-contact-nav pull-right">
+                                <div class="login">
+                                    <a [routerLink]="'/register'">Register</a>
+                                    <a [routerLink]="'/login'">Login</a>
+                                </div>
+                                <a class="btn btn-default" [routerLink]="'/contact-us'">contact</a>
+                            </div><!--/.register-contact-nav-->
+                        </div><!--/.logo-menu-wrap-->
+                    </div><!--/.col-lg-12-->
+                </div><!--/.row-->
+            </div><!--/.container-fluid-->
+        </div><!--/.headier-inner-->
+        
+        <div id="sticky-header"></div><!--/#sticky-header-->
+        
+        <!--Mobile Menu-->
+        <div class="mobile-menu">
+            <a class="mobile-logo" href="index.html"><img src="/assets/images/img/logo.png" alt="logo"></a>
+        </div>
+    </header><!--/.header-area-->
+    
+    <!--====Home Search Section
+    ====================================-->
+    <div class="section-heading-area text-center">
+        <h2 class="section-heading text-capitalize">Pune Vidyarthi Griha's College of Engineering, Nashik</h2>
+                  <p>स्वगृहे पूज्यते ज्येष्ठ: | स्वग्रामे पूज्यते प्रभू: |
+                      स्वदेशे पूज्यते राजा | विद्वान सर्वत्र पूज्यते ||</p>
+      </div><!--/.section-heading-area--> 
+
+    <div id="home-search-section" class="home-search-section-area bg-image home-header-one" style="background-image: url(/assets/images/img/pvgcoe.jpg);">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="welcome-text text-center tb" class="section-heading-area text-center">
+                      <div class="tb-cell">
+                        
+                   
+                          <form class="product-search-form" action="#" method="get">
+                              <div class="form-group">
+                                  <input class="form-controllar" name="search" placeholder="Search here" type="text">
+                                  <button class="btn btn-default btn-primary" type="submit">search</button>
+                               </div>
+                          </form><!--/.product-search-form-->
+                      </div><!--/.tb-cell-->
+                  </div><!--/.welcome-text-->
+              </div><!--/.col-lg-12-->
+          </div><!--/.row-->
+      </div><!--/.container-->
+    </div><!--/#home-search-section-->
+      
+    <!--====Services Section
+    ====================================-->
+    <section id="services-section" class="services-section-area s-pd1">
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col-lg-8">
+				    <div class="section-heading-area text-center">
+					    <h2 class="section-heading text-capitalize">This is what we offer you</h2>
+                        
+				    </div><!--/.section-heading-area--> 
+				</div><!--/.col-lg-8-->
+			</div><!--/.row-->
+			<div class="row">
+				<div class="col-lg-4 col-md-4">
+					<div class="single-service text-center">
+                        <div class="icon">
+				            <img src="/assets/images/img/icon/s-icon1.png" alt="icon">
+				        </div>
+						<h3>Expert Instractors</h3>
+						<p>At Academic Approach, we rigorously screen and train our instructors to ensure that they meet our high standards for academic knowledge</p>
+					</div><!--/.single-service-->
+				</div><!--/.col-lg-4-->
+				<div class="col-lg-4 col-md-4">
+					<div class="single-service text-center">
+                        <div class="icon">
+				            <img src="/assets/images/img/icon/s-icon2.png" alt="icon">
+				        </div><!--/.row-->
+						<h3>Learn Anywhere</h3>
+						<p>With a little regular maintenance, the mind can become razor-sharp and ready to tackle any challenge and absorb new information.</p>
+					</div><!--/.single-service-->
+				</div><!--/.col-lg-4-->
+				<div class="col-lg-4 col-md-4">
+					<div class="single-service text-center">
+                        <div class="icon">
+				            <img src="/assets/images/img/icon/s-icon3.png" alt="icon">
+				        </div><!--/.row-->
+						<h3>Unlimited Access</h3>
+						<p>Access an unlimited* number of books, tests, papers, and more</p>
+					</div><!--/.single-service-->
+				</div><!--/.col-lg-4-->	
+			</div><!--/.row-->
+		</div><!--/.container-->
+	</section><!--/#services-section-->
+   
+    <!--====Courses Section
+    ====================================-->
+    <section id="courses-section" class="popular-courses-area bg-gray s-pd2">
+		<div class="container">
+		    <div class="row justify-content-md-center">
+				<div class="col-lg-8">
+				    <div class="section-heading-area text-center">
+					    <h2 class="section-heading text-capitalize">Popular Courses</h2>
+				    </div><!--/.section-heading-area--> 
+				</div><!--/.col-lg-8-->
+			</div><!--/.row-->	
+			<div class="row">
+                <div class="col-lg-12">
+					<ul class="list-unstyled popular-filter-nav text-center">
+						<li><a class="filter" href="#" data-filter="*">All</a></li>
+						<li><a class="filter" href="#" data-filter=".design">Computer Engg.</a></li>
+						<li><a href="#" class="filter" data-filter=".development">Mechanical Engg.</a></li>
+						<li><a href="#" class="filter" data-filter=".business">I.T. Engg.</a></li>
+						<li><a href="#" class="filter" data-filter=".photography">E&TC Engg.</a></li>
+					</ul><!--/.popular-filter-nav-->
+				</div><!--/.col-lg-12-->
+            </div><!--/.row-->	
+			<div class="row courses-item-content">
+                <div class="col-lg-4 col-sm-6 design photography">
+                    <!--Single Course Item Start-->
+                    <div class="single-course-item border-radius">
+                        <div class="course-thumb-area">
+                            <img class="img-fluid" src="/assets/images/img/comp.jpg" alt="img">
+                            <div class="course-meta">
+                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                <a href="#"><i class="fa fa-share-alt"></i></a>
+                            </div>
+                            <span class="course-duration">2.2 hours</span>
+                        </div><!--/.course-thumb-area-->
+                        <div class="course-content">
+                            <h2><a href="single-course.html">Computer Engineering</a></h2>
+                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                            <div class="course-reviews">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <span class="total-reviews">(105 reviews)</span>
+                            </div><!--/.course-reviews-->
+                            <div class="trainer-profile clearfix">
+                                <img class="rounded-circle" src="/assets/images/img/author/author-1.jpg" alt="img">
+                                <div class="trainer-info">
+                                    <h3>Kelium Smith</h3>
+                                    <p>24 april 2017</p>
+                                </div>
+                                <div class="course-cat text-capitalize text-right"><a href="#">Development</a></div>
+                            </div><!--/.trainer-profile-->
+                        </div><!--/.course-content-->
+                    </div><!--/.single-course-item-end-->
+                </div><!--/.col-lg-4-->
+                
+                <div class="col-lg-4 col-sm-6 business">
+                    <!--Single Course Item Start-->
+                    <div class="single-course-item border-radius">
+                        <div class="course-thumb-area">
+                            <img class="img-fluid" src="/assets/images/img/mech.jpg" alt="img">
+                            <div class="course-meta">
+                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                <a href="#"><i class="fa fa-share-alt"></i></a>
+                            </div>
+                            <span class="course-duration">2.2 hours</span>
+                        </div><!--/.course-thumb-area-->
+                        <div class="course-content">
+                            <h2><a href="single-course.html">Mechanical Engineering</a></h2>
+                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                            <div class="course-reviews">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <span class="total-reviews">(105 reviews)</span>
+                            </div><!--/.course-reviews-->
+                             <div class="trainer-profile clearfix">
+                                <img class="rounded-circle" src="/assets/images/img/author/author-1.jpg" alt="img">
+                                <div class="trainer-info">
+                                    <h3>Kelium Smith</h3>
+                                    <p>24 april 2017</p>
+                                </div>
+                                <div class="course-cat text-capitalize text-right"><a href="#">Design</a></div>
+                            </div><!--/.trainer-profile-->
+                        </div><!--/.course-content-->
+                    </div><!--/.single-course-item-end-->
+                </div><!--/.col-lg-4-->
+                <div class="col-lg-4 col-sm-6 design photography">
+                    <!--Single Course Item Start-->
+                    <div class="single-course-item border-radius">
+                        <div class="course-thumb-area">
+                            <img class="img-fluid" src="/assets/images/img/it.jpg" alt="img">
+                            <div class="course-meta">
+                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                <a href="#"><i class="fa fa-share-alt"></i></a>
+                            </div>
+                            <span class="course-duration">2.2 hours</span>
+                        </div><!--/.course-thumb-area-->
+                        <div class="course-content">
+                            <h2><a href="single-course.html">Information Technology</a></h2>
+                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                            <div class="course-reviews">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <span class="total-reviews">(105 reviews)</span>
+                            </div><!--/.course-reviews-->
+                             <div class="trainer-profile clearfix">
+                                <img class="rounded-circle" src="/assets/images/img/author/author-1.jpg" alt="img">
+                                <div class="trainer-info">
+                                    <h3>Kelium Smith</h3>
+                                    <p>24 april 2017</p>
+                                </div>
+                                <div class="course-cat text-capitalize text-right"><a href="#">Development</a></div>
+                            </div><!--/.trainer-profile-->
+                        </div><!--/.course-content-->
+                    </div><!--/.single-course-item-end-->
+                </div><!--/.col-lg-4-->
+                <div class="col-lg-4 col-sm-6 development business">
+                    <!--Single Course Item Start-->
+                    <div class="single-course-item border-radius">
+                        <div class="course-thumb-area">
+                            <img class="img-fluid" src="/assets/images/img/entc.jpg" alt="img">
+                            <div class="course-meta">
+                                <a href="#"><i class="fa fa-heart-o"></i></a>
+                                <a href="#"><i class="fa fa-share-alt"></i></a>
+                            </div>
+                            <span class="course-duration">2.2 hours</span>
+                        </div><!--/.course-thumb-area-->
+                        <div class="course-content">
+                            <h2><a href="single-course.html">E&TC Engineering</a></h2>
+                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                            <div class="course-reviews">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                <span class="total-reviews">(105 reviews)</span>
+                            </div><!--/.course-reviews-->
+                            <div class="trainer-profile clearfix">
+                                <img class="rounded-circle" src="/assets/images/img/author/author-1.jpg" alt="img">
+                                <div class="trainer-info">
+                                    <h3>Kelium Smith</h3>
+                                    <p>24 april 2017</p>
+                                </div>
+                                <div class="course-cat text-capitalize text-right"><a href="#">Design</a></div>
+                            </div><!--/.trainer-profile-->
+                        </div><!--/.course-content-->
+                    </div><!--/.single-course-item-end-->
+                </div><!--/.col-lg-4-->
+                
+                
+                
+                
+                  			</div><!--/.row-->
+  			<div class="row">
+  			    <div class="col-lg-12">
+                    <div class="group-btn text-center">
+                        <a href="#" class="btn btn-default btn-primary">Start Your Free Trail</a>
+                        <a href="#" class="btn btn-default">Explore More Courses</a>
+                    </div><!--/.form-group-btn-->
+                </div><!--/.col-lg-12-->
+  			</div><!--/.row-->
+		</div><!--/.container-->
+	</section><!--/#courses-section-->
+    
+    <!--====Counter Section
+    ====================================-->
+    <section class="counter-section before-bg bg-image s-pd145" style="background-image: url(/assets/images/img/counter-bg.jpg);">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-10">   
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-3 col-6">
+                            <div class="single-counter">
+                                <h2><span class="counter">874</span></h2>
+                                <p>courses</p>
+                            </div><!--/.single-counter-->
+                        </div><!--/.col-lg-3-->
+                        <div class="col-lg-3 col-sm-3 col-6">
+                            <div class="single-counter">
+                                <h2><span class="counter">600</span></h2>
+                                <p>students</p>
+                            </div><!--/.single-counter-->
+                        </div><!--/.col-lg-3-->
+                        <div class="col-lg-3 col-sm-3 col-6">
+                            <div class="single-counter">
+                                <h2><span class="counter">472</span></h2>
+                                <p>E-Book</p>
+                            </div><!--/.single-counter-->
+                        </div><!--/.col-lg-3-->
+                        <div class="col-lg-3 col-sm-3 col-6">
+                            <div class="single-counter">
+                                <h2><span class="counter">243</span></h2>
+                                <p>Teachers</p>
+                            </div><!--/.single-counter-->
+                        </div><!--/.col-lg-3-->
+                    </div><!--/.row-->
+                </div><!--/.col-lg-10-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/.counter-section-->
+    
+    <!--====Featured Section
+    ====================================-->
+    <section id="featured-section" class="featured-course-area bg-gray s-pd3">
+		<div class="container">
+            <div class="row justify-content-md-center">
+				<div class="col-lg-8">
+				    <div class="section-heading-area text-center">
+					    <h2 class="section-heading text-capitalize">Featured Course</h2>
+				    </div><!--/.section-heading-area--> 
+				</div><!--/.col-lg-8-->
+			</div><!--/.row-->
+           <div class="row">
+			    <div class="col-lg-6">
+                    <a href="https://www.youtube.com/watch?v=Ey1lkwYGSC0" class="video-btn">
+                        <img class="img-fluid" src="/assets/images/img/featured-video.jpg" alt="img">
+                        <span class="play-icon">
+                            <i class="fa fa-play"></i>
+                        </span>
+                    </a>                                       
+                </div><!--/.col-lg-6-->
+                <div class="col-lg-6">
+                	<div class="featured-course-content">
+                		<h2>Illustrator CC 2017 Essential Training</h2>
+						<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+						<ul class="list-unstyled list-check">
+							<li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+							<li>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+							officia deserunt mollit anim id est laborum.</li>
+							<li>Duis aute irure dolor in reprehenderit in voluptate velit esse.</li>
+						</ul>
+						<div class="featured-bottom">
+							<a class="btn btn-default btn-primary" href="single-course.html">Enroll this courses</a>
+							<p>Enroll End<span class="enrol-date">26/12/2017</span></p>
+						</div>
+					</div><!--/.featured-course-content-->
+                </div><!--/.col-lg-6-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#featured-section-->
+    
+    <!--====Faqs Section
+    ====================================-->
+    <section id="faqs-section" class="faqs-section-area s-pd1">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-8">
+                    <div class="section-heading-area text-center">
+                        <h2 class="section-heading text-capitalize">Frequently Asked Questions</h2>
+                    </div><!--/.section-heading-area--> 
+                </div><!--/.col-lg-8-->
+            </div><!--/.row-->
+
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <!--Single FAQ-->
+                    <div class="sengle-faq">
+                        <span class="faq-number">A</span>
+                        <div class="sengle-faq-content">
+                            <h3>Officia deserunt mollit anim est laborum?</h3>
+                            <p>Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem. </p>
+                        </div>
+                    </div><!--/.sengle-faq-end-->
+                    
+                    <!--Single FAQ-->
+                    <div class="sengle-faq">
+                        <span class="faq-number">C</span>
+                        <div class="sengle-faq-content">
+                            <h3>Excepteur sint occaecat cupidatat?</h3>
+                            <p>Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+                    </div><!--/.sengle-faq-end-->
+                </div><!--/.col-lg-6-->
+                
+                <div class="col-lg-6 col-sm-12">
+                    <!--Single FAQ-->
+                    <div class="sengle-faq">
+                        <span class="faq-number">B</span>
+                        <div class="sengle-faq-content">
+                            <h3>Sed ut perspiciatis unde omnis?</h3>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        </div>
+                    </div><!--/.sengle-faq-end-->
+                    <!--Single FAQ-->
+                    <div class="sengle-faq">
+                        <span class="faq-number">D</span>
+                        <div class="sengle-faq-content">
+                            <h3>Duis aute irure dolor in reprehenderit?</h3>
+                            <p>Quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                        </div>
+                    </div><!--/.sengle-faq-end-->
+                </div><!--/.col-lg-6-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#faqs-section-->
+    
+    <!--====Blog Section
+    ====================================-->
+    <section id="blog-section" class="blog-section-area bg-gray s-pd2">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-8">
+                    <div class="section-heading-area text-center">
+                        <h2 class="section-heading text-capitalize">Recent news</h2>
+                    </div><!--/.section-heading-area--> 
+                </div><!--/.col-lg-8-->
+            </div><!--/.row-->
+            <div class="row">
+                <!-- Start single blog -->
+                <div class="col-lg-4 col-sm-12">
+                    <div class="blog">
+                        <div class="blog-thumb">
+                            <img src="/assets/images/img/blog/post-1.jpg" alt="blog image">     
+                        </div>
+                        <div class="blog-details">
+                            <div class="blog-time">
+                                <span class="blog-date">April 19th, 2017 By <a href="#">Alex Doe</a></span>
+                                <span class="blog__category">Category <a href="#">Travel</a></span>
+                            </div>
+                            <div class="blog-title">
+                                <h3><a href="single-blog.html">Excepteur sint occaecat cupidatat</a></h3>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quisquam, et laboriosam beatae. Voluptate omni.</p>
+                            <div class="blog-more">
+                                <a href="single-blog.html" class="btn btn-default">Read More</a>
+                                <span class="blog-comments"><a href="#">6 comments</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End single blog -->
+                <!-- Start single blog -->
+                <div class="col-lg-4 col-sm-12">
+                    <div class="blog">
+                        <div class="blog-thumb">
+                            <img src="/assets/images/img/blog/post-2.jpg" alt="blog image">     
+                        </div>
+                        <div class="blog-details">
+                            <div class="blog-time">
+                                <span class="blog-date">April 19th, 2017 By <a href="#">Alex Doe</a></span>
+                                <span class="blog__category">Category <a href="#">Travel</a></span>
+                            </div>
+                            <div class="blog-title">
+                                <h3><a href="single-blog.html">Duis aute irure in reprehenderit</a></h3>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quisquam, et laboriosam beatae. Voluptate omni.</p>
+                            <div class="blog-more">
+                                <a href="single-blog.html" class="btn btn-default">Read More</a>
+                                <span class="blog-comments"><a href="#">6 comments</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End single blog -->
+                <!-- Start single blog -->
+                <div class="col-lg-4 col-sm-12">
+                    <div class="blog">
+                        <div class="blog-thumb">
+                            <img src="/assets/images/img/blog/post-3.jpg" alt="blog image">     
+                        </div>
+                        <div class="blog-details">
+                            <div class="blog-time">
+                                <span class="blog-date">April 19th, 2017 By <a href="#">Alex Doe</a></span>
+                                <span class="blog__category">Category <a href="#">Travel</a></span>
+                            </div>
+                            <div class="blog-title">
+                                <h3><a href="single-blog.html">Officia deserunt mollit dolor anim</a></h3>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quisquam, et laboriosam beatae. Voluptate omni.</p>
+                            <div class="blog-more">
+                                <a href="#" class="btn btn-default">Read More</a>
+                                <span class="blog-comments"><a href="#">6 comments</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End single blog -->
+            </div><!--/.row-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="blog-button text-center">
+                        <a href="http://pvgcoenashik.org/engineering/principals-message/" class="btn btn-default btn-primary">go to blog</a>
+                    </div>
+                </div><!--/.col-lg-12-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!-- End blog area -->
+   
+    <!--====Our Partners Section
+    ====================================-->
+    <section class="our-partners-section s-pd2">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-8">
+                    <div class="section-heading-area text-center">
+                        <h2 class="section-heading text-capitalize">Our Partners</h2>
+                    </div><!--/.section-heading-area--> 
+                </div><!--/.col-lg-8-->
+            </div><!--/.row-->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="client-carousel" class="owl-carousel">
+                        <div class="single-logo">
+                            <img src="/assets/images/img/logos/1.png" alt="img">
+                        </div>
+                        <div class="single-logo">
+                            <img src="/assets/images/img/logos/2.png" alt="img">
+                        </div>
+                        <div class="single-logo">
+                            <img src="/assets/images/img/logos/3.png" alt="img">
+                        </div>
+                        <div class="single-logo">
+                            <img src="/assets/images/img/logos/4.png" alt="img">
+                        </div>
+                        <div class="single-logo">
+                            <img src="/assets/images/img/logos/2.png" alt="img">
+                        </div>
+                    </div><!--/.client-carousel-->
+                </div><!--/.col-lg-12-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/.our-partners-section-->
+   
+   <app-footer></app-footer>

@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="login-page page-wrapper s-pd100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="login-form-area">
+                    <form action="post">
+                        <h3>Register Here
+                        </h3>
+                       
+                        <div class="divider-or text-center">
+                            <span>Register</span>
+                        </div>
+                        <p><input [(ngModel)]="loginReq.role" class="form-control" type="text" name="role" id="user_role" placeholder="Student / Admin"></p>
+                        <p><input [(ngModel)]="loginReq.username" class="form-control" type="text" name="log" id="user_register" placeholder="Username / Email"></p>
+                        <p><input [(ngModel)]="loginReq.pwd" class="form-control" type="password" name="pwd" id="user_pass" placeholder="Password"></p>
+                        
+                        <p><button class="btn btn-default btn-primary" (click)="adduser()" type = "button">Register Your Account</button></p>
+                        
+                    </form>
+
+  
+                        <div id="snackbar" (click)="removeToast()" [ngClass]="{'show' : isShowMsg}">{{isShowMsg}}</div>
+            
+                </div><!--/.login-form-area-->
+

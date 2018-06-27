@@ -1,0 +1,432 @@
+<!--====Header Area
+    ====================================-->
+    <header id="site-header" class="header-area">
+        <div class="header-inner">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="logo-menu-wrap hidden-xs hidden-sm">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="/assets/images/logo.png" alt="logo">
+                                </a>
+                            </div><!--/.logo-->
+                            <nav class="menu">
+                                <ul id="nav">
+                                    <li class="dropdown-trigger"><a >home</a>
+                                        <ul class="dropdown-content">
+                                            <li><a [routerLink]="'/login'">Test</a></li>
+                                            <li><a [routerLink]="'/adminpanel'">Home</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-trigger"><a >Results</a>
+                                        <ul class="dropdown-content">
+                                            <li><a [routerLink]="'/final-result/wt'">WT</a></li>
+                                            <li><a [routerLink]="'/final-result/spos'">SPOS</a></li>
+                                            <li><a [routerLink]="'/final-result/daa'">DAA</a></li>
+                                            <li><a [routerLink]="'/final-result/sdm'">SDM</a></li>
+                                            <li><a [routerLink]="'/final-result/sdm'">ESIOT</a></li>
+                                        </ul>
+                                    </li>
+                                                     
+                                         
+                                   
+                                </ul>
+                            </nav><!--/.menu-->
+                            
+                        </div><!--/.logo-menu-wrap-->
+                    </div><!--/.col-lg-12-->
+                </div><!--/.row-->
+            </div><!--/.container-fluid-->
+        </div><!--/.headier-inner-->
+        
+        <div id="sticky-header"></div><!--/#sticky-header-->
+        
+        <!--Mobile Menu-->
+        <div class="mobile-menu">
+            <a class="mobile-logo" href="index.html"><img src="/assets/images/logo.png" alt="logo"></a>
+        </div>
+    </header><!--/.header-area-->
+    
+    <!--=======Page Heading
+      =================================-->
+    <section class="page-heading-section heading-style-two bg-image before-bg" style="background-image: url(/assets/images/mcq.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="page-heading">
+                        <h2 class="page-name text-capitalize">Welcome To OES Admin</h2>
+                        <p>Manage Your Tests Here.. </p>
+                    </div>
+                    <!--/.page-heading-->
+                </div>
+                <!--/.col-md-12-->
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </section>
+    <!--/.page-heading-area-->
+    
+    
+    <div class="e-learning-page page-wrapper">
+     
+    
+        <!--====Courses Section
+          ====================================-->
+        <section id="courses-section" class="popular-courses-area bg-gray s-pd2">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-8">
+                        <div class="section-heading-area text-center">
+                            <h2 class="section-heading text-capitalize">Popular Tests</h2>
+                        </div>
+                        <!--/.section-heading-area-->
+                    </div>
+                    <!--/.col-lg-8-->
+                </div>
+                <!--/.row-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-unstyled popular-filter-nav text-center">
+                            <li>
+                                <a class="filter"  data-filter="*">All</a>
+                            </li>
+                           
+                        </ul>
+                        <!--/.popular-filter-nav-->
+                    </div>
+                    <!--/.col-lg-12-->
+                </div>
+                <!--/.row-->
+                <div class="row courses-item-content">
+                    <div *ngFor="let one of courseList" class="col-lg-4 col-sm-6 design photography">
+                        <!--Single Course Item Start-->
+                        <div class="single-course-item border-radius">
+                            <div class="course-thumb-area">
+                                <img class="img-fluid" src="/assets/images/courses/wt.jpg" alt="img">
+                                <div class="course-meta">
+                                    <a >
+                                        <i class="fa fa-heart-o"></i>
+                                    </a>
+                                    <a >
+                                        <i class="fa fa-share-alt"></i>
+                                    </a>
+                                </div>
+                                <span class="course-duration">2.2 hours</span>
+                            </div>
+                            <!--/.course-thumb-area-->
+                            <div class="course-content">
+                                <h2>
+                                    <a [routerLink]="one.routerLink" [innerHTML]="one.name" (click)="gotoeditor()"></a>
+                                </h2>
+                                
+                                <div class="course-reviews">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <span class="total-reviews">(105 reviews)</span>
+                                </div>
+                                <!--/.course-reviews-->
+                                <div class="trainer-profile clearfix">
+                                    <img class="rounded-circle" src="/assets/images/author/author-1.jpg" alt="img">
+                                    <div class="trainer-info">
+                                        <h3>Prasad Pawar</h3>
+                                        <p>24 Feb 2018</p>
+                                    </div>
+                                    <div class="course-cat text-capitalize text-right">
+                                        <a >Development</a>
+                                    </div>
+                                </div>
+                                <!--/.trainer-profile-->
+                            </div>
+                            <!--/.course-content-->
+                        </div>
+                        <!--/.single-course-item-end-->
+                    </div>
+                    <!--/.col-lg-4-->
+    
+                    <div class="col-lg-4 col-sm-6 business">
+                        <!--Single Course Item Start-->
+                        <div class="single-course-item border-radius">
+                            <div class="course-thumb-area">
+                                <img class="img-fluid" src="/assets/images/courses/spos.jpg" alt="img">
+                                <div class="course-meta">
+                                    <a >
+                                        <i class="fa fa-heart-o"></i>
+                                    </a>
+                                    <a >
+                                        <i class="fa fa-share-alt"></i>
+                                    </a>
+                                </div>
+                                <span class="course-duration">2.2 hours</span>
+                            </div>
+                            <!--/.course-thumb-area-->
+                            <div class="course-content">
+                                <h2>
+                                    <a (click)="gotoeditor()">SPOS</a>
+                                </h2>
+                                <p>System Programming And Operating System</p>
+                                <div class="course-reviews">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <span class="total-reviews">(105 reviews)</span>
+                                </div>
+                                <!--/.course-reviews-->
+                                <div class="trainer-profile clearfix">
+                                    <img class="rounded-circle" src="/assets/images/author/author-1.jpg" alt="img">
+                                    <div class="trainer-info">
+                                        <h3>Prasad Pawar</h3>
+                                        <p>24 april 2018</p>
+                                    </div>
+                                    <div class="course-cat text-capitalize text-right">
+                                        <a >Development</a>
+                                    </div>
+                                </div>
+                                <!--/.trainer-profile-->
+                            </div>
+                            <!--/.course-content-->
+                        </div>
+                        <!--/.single-course-item-end-->
+                    </div>
+                    <!--/.col-lg-4-->
+                    <div class="col-lg-4 col-sm-6 design photography">
+                        <!--Single Course Item Start-->
+                        <div class="single-course-item border-radius">
+                            <div class="course-thumb-area">
+                                <img class="img-fluid" src="/assets/images/courses/daa.jpg" alt="img">
+                                <div class="course-meta">
+                                    <a >
+                                        <i class="fa fa-heart-o"></i>
+                                    </a>
+                                    <a >
+                                        <i class="fa fa-share-alt"></i>
+                                    </a>
+                                </div>
+                                <span class="course-duration">2.2 hours</span>
+                            </div>
+                            <!--/.course-thumb-area-->
+                            <div class="course-content">
+                                <h2>
+                                    <a (click)="gotoeditor()">DAA</a>
+                                </h2>
+                                <p>Design And Analysis Of Algorithm</p>
+                                <div class="course-reviews">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <span class="total-reviews">(105 reviews)</span>
+                                </div>
+                                <!--/.course-reviews-->
+                                <div class="trainer-profile clearfix">
+                                    <img class="rounded-circle" src="/assets/images/author/author-1.jpg" alt="img">
+                                    <div class="trainer-info">
+                                        <h3>Prasad Pawar</h3>
+                                        <p>24 april 2018</p>
+                                    </div>
+                                    <div class="course-cat text-capitalize text-right">
+                                        <a >Development</a>
+                                    </div>
+                                </div>
+                                <!--/.trainer-profile-->
+                            </div>
+                            <!--/.course-content-->
+                        </div>
+                        <!--/.single-course-item-end-->
+                    </div>
+                    <!--/.col-lg-4-->
+                    <div class="col-lg-4 col-sm-6 development business">
+                        <!--Single Course Item Start-->
+                        <div class="single-course-item border-radius">
+                            <div class="course-thumb-area">
+                                <img class="img-fluid" src="/assets/images/courses/sdm.jpg" alt="img">
+                                <div class="course-meta">
+                                    <a >
+                                        <i class="fa fa-heart-o"></i>
+                                    </a>
+                                    <a >
+                                        <i class="fa fa-share-alt"></i>
+                                    </a>
+                                </div>
+                                <span class="course-duration">2.2 hours</span>
+                            </div>
+                            <!--/.course-thumb-area-->
+                            <div class="course-content">
+                                <h2>
+                                    <a (click)="gotoeditor()">SDM</a>
+                                </h2>
+                                <p>Software Modeling And Design</p>
+                                <div class="course-reviews">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <span class="total-reviews">(105 reviews)</span>
+                                </div>
+                                <!--/.course-reviews-->
+                                <div class="trainer-profile clearfix">
+                                    <img class="rounded-circle" src="/assets/images/author/author-1.jpg" alt="img">
+                                    <div class="trainer-info">
+                                        <h3>Prasad Pawar</h3>
+                                        <p>24 april 2018</p>
+                                    </div>
+                                    <div class="course-cat text-capitalize text-right">
+                                        <a >Development</a>
+                                    </div>
+                                </div>
+                                <!--/.trainer-profile-->
+                            </div>
+                            <!--/.course-content-->
+                        </div>
+                        <!--/.single-course-item-end-->
+                    </div>
+                    <!--/.col-lg-4-->
+    
+                    <div class="col-lg-4 col-sm-6 design">
+                        <!--Single Course Item Start-->
+                        <div class="single-course-item border-radius">
+                            <div class="course-thumb-area">
+                                <img class="img-fluid" src="/assets/images/courses/esiot.jpg" alt="img">
+                                <div class="course-meta">
+                                    <a >
+                                        <i class="fa fa-heart-o"></i>
+                                    </a>
+                                    <a >
+                                        <i class="fa fa-share-alt"></i>
+                                    </a>
+                                </div>
+                                <span class="course-duration">2.2 hours</span>
+                            </div>
+                            <!--/.course-thumb-area-->
+                            <div class="course-content">
+                                <h2>
+                                    <a (click)="gotoeditor()">ESIOT</a>
+                                </h2>
+                                <p>Embedded Systems And Internet Of Things </p>
+                                <div class="course-reviews">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <span class="total-reviews">(105 reviews)</span>
+                                </div>
+                                <!--/.course-reviews-->
+                                <div class="trainer-profile clearfix">
+                                    <img class="rounded-circle" src="/assets/images/author/author-1.jpg" alt="img">
+                                    <div class="trainer-info">
+                                        <h3>Prasad Pawar</h3>
+                                        <p>24 april 2018</p>
+                                    </div>
+                                    <div class="course-cat text-capitalize text-right">
+                                        <a >Development</a>
+                                    </div>
+                                </div>
+                                <!--/.trainer-profile-->
+                            </div>
+                            <!--/.course-content-->
+                        </div>
+                        <!--/.single-course-item-end-->
+                    </div>
+                    <!--/.col-lg-4-->
+                    <div class="col-lg-4 col-sm-6 development photography">
+                        <!--Single Course Item Start-->
+                        <div class="single-course-item border-radius">
+                            
+                            <!--/.course-content-->
+                        </div>
+                        <!--/.single-course-item-end-->
+                    </div>
+                    <!--/.col-lg-4-->
+                </div>
+                <!--/.row-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="group-btn text-center">
+                            <a (click)="gotoeditor()" class="btn btn-default btn-primary">Add More Tests</a>
+                            <a  class="btn btn-default">Remove Tests</a>
+                        </div>
+                        <!--/.form-group-btn-->
+                    </div>
+                    <!--/.col-lg-12-->
+                </div>
+                <!--/.row-->
+            </div>
+            <!--/.container-->
+        </section>
+        <!--/#courses-section-->
+    
+        <section class="counter-section before-bg bg-image s-pd145" style="background-image: url(/assets/images/world.gif);">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="single-counter">
+                                    <h2>
+                                        <span class="counter">5</span>
+                                    </h2>
+                                    <p>courses</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="single-counter">
+                                    <h2>
+                                        <span class="counter">50</span>
+                                    </h2>
+                                    <p>students</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="single-counter">
+                                    <h2>
+                                        <span class="counter">15</span>
+                                    </h2>
+                                    <p>E-Book</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="single-counter">
+                                    <h2>
+                                        <span class="counter">30</span>
+                                    </h2>
+                                    <p>Tests Cunducted</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-md-10-->
+                </div>
+                <!--/.row-->
+            </div>
+            <!--/.container-->
+        </section>
+    
+    
+    
+       
+    
+        
+    
+    <app-footer></app-footer>
+    
+    
+        <!--=========== JS FILE DECLARATION  ==============-->
+        <!-- jQuery Latest Version -->
+        <script src="assets/js/jquery-v3.2.1.min.js"></script>
+        <!-- PopperJS -->
+        <script src="assets/js/popper.min.js"></script>
+        <!-- Bootstrap framework JS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- All JS plugins included in this file. -->
+        <script src="assets/js/plugins.js"></script>
+        <!-- Main JS file that contents all jQuery Plugins activation. -->
+        <script src="assets/js/main.js"></script>

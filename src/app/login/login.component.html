@@ -1,0 +1,47 @@
+<h2> Pune Vidyarthi Griha's College of Engineering, Nashik</h2>
+
+
+<div class="login-page page-wrapper s-pd100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="login-form-area">
+                    <div action="post">
+                        <h3>Online Exam System</h3>
+
+                        <div class="divider-or text-center">
+                            <span>Login</span>
+                        </div>
+                        
+                        <div class="col-6 text-right">
+                            Select Subject:
+                            <select [(ngModel)]="subject" >
+                                <option *ngFor="let subject of subjects" [value]="subject.subject">{{subject.subject}}</option>
+                              </select>
+                          </div>
+
+                        <p>
+                                <input [(ngModel)]="loginReq.role" class="form-control" type="text" name="role" id="user_role" placeholder="Student / Admin">
+                            </p>
+                        <p>
+                            <input [(ngModel)]="loginReq.username" class="form-control" type="text" name="log" id="user_login" placeholder="Username / Email">
+                        </p>
+                        <p>
+                            <input [(ngModel)]="loginReq.pwd" class="form-control" type="password" name="pwd" id="user_pass" placeholder="Password">
+                      
+                            <button class="btn btn-default btn-primary" (click)="attemptLogin()" type="button">Log In Your Account</button>
+                        </p>
+                       
+                        <div class="login-form-register-now">
+                            <p>Not yet a member?
+                                <button class="btn btn-default btn-primary" type="button" (click)="clickRegister()">Register with OES </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="snackbar" (click)="removeToast()" [ngClass]="{'show' : isShowMsg}">{{isShowMsg}}</div>
+                <!--/.login-form-area-->
+            </div>
+        </div>
+    </div>
+</div>

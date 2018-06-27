@@ -1,0 +1,9 @@
+.selected{
+    color: orangered;
+}
+.correct{
+    color: green;
+}
+.wrong{
+    color: red;
+}
