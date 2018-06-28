@@ -142,10 +142,22 @@ app.get("/get-subject-result", (req, res) => {
         md.forEach(one => {
             expandedObject = JSON.parse(JSON.stringify(one))
             console.log(expandedObject)
+            let count =0;
             userModel.findOne({ _id: expandedObject.userId }, (userError, userData) => {
                 expandedObject.userDetails = userData
-                finalResult.push(expandedObject)
-                if (finalResult.length == md.length) {
+                let isFound = false;
+                finalResult.forEach(one => {
+                    
+                    if(expandedObject.quizToken == one.quizToken)
+                    {
+                        isFound = true
+                    }
+                });
+                if(!isFound){
+                    finalResult.push(expandedObject)
+                }
+                count++
+                if (finalResult.length == count) {
                     if (!me && md.length > 0) {
                         res.send(finalResult)
                     }
