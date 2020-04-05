@@ -25,7 +25,7 @@
     "@ngx-share/button": "^5.0.1",
     "angular-countdown": "^1.2.1",
     "core-js": "^2.4.1",
-    "mongoose": "^5.0.7",
+    "mongoose": "^5.7.5",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
   },
